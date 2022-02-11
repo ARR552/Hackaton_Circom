@@ -111,7 +111,7 @@ type Synchronizer interface {
 }
 
 // NewSynchronizer creates and initializes an instance of Synchronizer
-func NewSynchronizer(genBlockNumber uint64, cfg Config) (Synchronizer, error) {
+func NewSynchronizer(cfg Config) (Synchronizer, error) {
 	ctx, cancel := context.WithCancel(context.Background())
 	etherMan, err := NewEtherman(cfg)
 	if err != nil {
@@ -121,7 +121,7 @@ func NewSynchronizer(genBlockNumber uint64, cfg Config) (Synchronizer, error) {
 		etherMan:       etherMan,
 		ctx:            ctx,
 		cancelCtx:      cancel,
-		genBlockNumber: genBlockNumber,
+		genBlockNumber: cfg.GenBlockNumber,
 		cfg:            cfg,
 	}, nil
 }
