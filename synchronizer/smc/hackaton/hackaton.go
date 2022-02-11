@@ -30,8 +30,8 @@ var (
 
 // HackatonMetaData contains all meta data concerning the Hackaton contract.
 var HackatonMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"information\",\"type\":\"string\"}],\"name\":\"Data\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"data\",\"type\":\"string\"}],\"name\":\"sendEvent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"hash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[2]\",\"name\":\"proofA\",\"type\":\"uint256[2]\"},{\"internalType\":\"uint256[2][2]\",\"name\":\"proofB\",\"type\":\"uint256[2][2]\"},{\"internalType\":\"uint256[2]\",\"name\":\"proofC\",\"type\":\"uint256[2]\"}],\"name\":\"verifyProof\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
-	Bin: "0x608060405234801561001057600080fd5b5061002d61002261003260201b60201c565b61003a60201b60201c565b6100fe565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6109578061010d6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806327e0b8991461005c5780633d1aa90e14610078578063715018a6146100945780638da5cb5b1461009e578063f2fde38b146100bc575b600080fd5b61007660048036038101906100719190610528565b6100d8565b005b610092600480360381019061008d91906105f0565b610112565b005b61009c610159565b005b6100a66101e1565b6040516100b39190610699565b60405180910390f35b6100d660048036038101906100d191906106e0565b61020a565b005b7fe8e349d9d60379b7e0a717f216d3d9efaf00b5dce8b634a63f24a5d76251059f816040516101079190610795565b60405180910390a150565b6001610153576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161014a90610803565b60405180910390fd5b50505050565b610161610302565b73ffffffffffffffffffffffffffffffffffffffff1661017f6101e1565b73ffffffffffffffffffffffffffffffffffffffff16146101d5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016101cc9061086f565b60405180910390fd5b6101df600061030a565b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b610212610302565b73ffffffffffffffffffffffffffffffffffffffff166102306101e1565b73ffffffffffffffffffffffffffffffffffffffff1614610286576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161027d9061086f565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102f6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102ed90610901565b60405180910390fd5b6102ff8161030a565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6000604051905090565b600080fd5b600080fd5b600080fd5b600080fd5b6000601f19601f8301169050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b610435826103ec565b810181811067ffffffffffffffff82111715610454576104536103fd565b5b80604052505050565b60006104676103ce565b9050610473828261042c565b919050565b600067ffffffffffffffff821115610493576104926103fd565b5b61049c826103ec565b9050602081019050919050565b82818337600083830152505050565b60006104cb6104c684610478565b61045d565b9050828152602081018484840111156104e7576104e66103e7565b5b6104f28482856104a9565b509392505050565b600082601f83011261050f5761050e6103e2565b5b813561051f8482602086016104b8565b91505092915050565b60006020828403121561053e5761053d6103d8565b5b600082013567ffffffffffffffff81111561055c5761055b6103dd565b5b610568848285016104fa565b91505092915050565b6000819050919050565b61058481610571565b811461058f57600080fd5b50565b6000813590506105a18161057b565b92915050565b600080fd5b6000819050826020600202820111156105c8576105c76105a7565b5b92915050565b6000819050826040600202820111156105ea576105e96105a7565b5b92915050565b600080600080610120858703121561060b5761060a6103d8565b5b600061061987828801610592565b945050602061062a878288016105ac565b935050606061063b878288016105ce565b92505060e061064c878288016105ac565b91505092959194509250565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061068382610658565b9050919050565b61069381610678565b82525050565b60006020820190506106ae600083018461068a565b92915050565b6106bd81610678565b81146106c857600080fd5b50565b6000813590506106da816106b4565b92915050565b6000602082840312156106f6576106f56103d8565b5b6000610704848285016106cb565b91505092915050565b600081519050919050565b600082825260208201905092915050565b60005b8381101561074757808201518184015260208101905061072c565b83811115610756576000848401525b50505050565b60006107678261070d565b6107718185610718565b9350610781818560208601610729565b61078a816103ec565b840191505092915050565b600060208201905081810360008301526107af818461075c565b905092915050565b7f566572696669636174696f6e3a20494e56414c49445f50524f4f460000000000600082015250565b60006107ed601b83610718565b91506107f8826107b7565b602082019050919050565b6000602082019050818103600083015261081c816107e0565b9050919050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b6000610859602083610718565b915061086482610823565b602082019050919050565b600060208201905081810360008301526108888161084c565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b60006108eb602683610718565b91506108f68261088f565b604082019050919050565b6000602082019050818103600083015261091a816108de565b905091905056fea2646970667358221220b110a8a7b738e798a24b0942f6d3dcb9103c5235d9c813618e6bfecd20a8037764736f6c63430008090033",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"information\",\"type\":\"bytes32\"}],\"name\":\"Data\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"latestData\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"data\",\"type\":\"bytes32\"}],\"name\":\"sendEvent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"hash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[2]\",\"name\":\"proofA\",\"type\":\"uint256[2]\"},{\"internalType\":\"uint256[2][2]\",\"name\":\"proofB\",\"type\":\"uint256[2][2]\"},{\"internalType\":\"uint256[2]\",\"name\":\"proofC\",\"type\":\"uint256[2]\"}],\"name\":\"verifyProof\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+	Bin: "0x608060405234801561001057600080fd5b5061002d61002261003260201b60201c565b61003a60201b60201c565b6100fe565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6107ad8061010d6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806302b4834b14610067578063142bc2ae146100835780633d1aa90e146100a1578063715018a6146100bd5780638da5cb5b146100c7578063f2fde38b146100e5575b600080fd5b610081600480360381019061007c919061043f565b610101565b005b61008b610142565b604051610098919061047b565b60405180910390f35b6100bb60048036038101906100b691906104df565b610148565b005b6100c561018f565b005b6100cf610217565b6040516100dc9190610588565b60405180910390f35b6100ff60048036038101906100fa91906105cf565b610240565b005b806001819055507fe3a4155b3f69dfa3d6f2117e5ac240e51df322f85f8084ee2cdd51398e036e3d81604051610137919061047b565b60405180910390a150565b60015481565b6001610189576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161018090610659565b60405180910390fd5b50505050565b610197610338565b73ffffffffffffffffffffffffffffffffffffffff166101b5610217565b73ffffffffffffffffffffffffffffffffffffffff161461020b576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610202906106c5565b60405180910390fd5b6102156000610340565b565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b610248610338565b73ffffffffffffffffffffffffffffffffffffffff16610266610217565b73ffffffffffffffffffffffffffffffffffffffff16146102bc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016102b3906106c5565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561032c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161032390610757565b60405180910390fd5b61033581610340565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b600080fd5b6000819050919050565b61041c81610409565b811461042757600080fd5b50565b60008135905061043981610413565b92915050565b60006020828403121561045557610454610404565b5b60006104638482850161042a565b91505092915050565b61047581610409565b82525050565b6000602082019050610490600083018461046c565b92915050565b600080fd5b6000819050826020600202820111156104b7576104b6610496565b5b92915050565b6000819050826040600202820111156104d9576104d8610496565b5b92915050565b60008060008061012085870312156104fa576104f9610404565b5b60006105088782880161042a565b94505060206105198782880161049b565b935050606061052a878288016104bd565b92505060e061053b8782880161049b565b91505092959194509250565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061057282610547565b9050919050565b61058281610567565b82525050565b600060208201905061059d6000830184610579565b92915050565b6105ac81610567565b81146105b757600080fd5b50565b6000813590506105c9816105a3565b92915050565b6000602082840312156105e5576105e4610404565b5b60006105f3848285016105ba565b91505092915050565b600082825260208201905092915050565b7f566572696669636174696f6e3a20494e56414c49445f50524f4f460000000000600082015250565b6000610643601b836105fc565b915061064e8261060d565b602082019050919050565b6000602082019050818103600083015261067281610636565b9050919050565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b60006106af6020836105fc565b91506106ba82610679565b602082019050919050565b600060208201905081810360008301526106de816106a2565b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b60006107416026836105fc565b915061074c826106e5565b604082019050919050565b6000602082019050818103600083015261077081610734565b905091905056fea2646970667358221220936e3f680f2614d20ea0096e4a0b9be7408da0ab93b90f55fafb119eebf324dd64736f6c63430008090033",
 }
 
 // HackatonABI is the input ABI used to generate the binding from.
@@ -201,6 +201,37 @@ func (_Hackaton *HackatonTransactorRaw) Transact(opts *bind.TransactOpts, method
 	return _Hackaton.Contract.contract.Transact(opts, method, params...)
 }
 
+// LatestData is a free data retrieval call binding the contract method 0x142bc2ae.
+//
+// Solidity: function latestData() view returns(bytes32)
+func (_Hackaton *HackatonCaller) LatestData(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _Hackaton.contract.Call(opts, &out, "latestData")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// LatestData is a free data retrieval call binding the contract method 0x142bc2ae.
+//
+// Solidity: function latestData() view returns(bytes32)
+func (_Hackaton *HackatonSession) LatestData() ([32]byte, error) {
+	return _Hackaton.Contract.LatestData(&_Hackaton.CallOpts)
+}
+
+// LatestData is a free data retrieval call binding the contract method 0x142bc2ae.
+//
+// Solidity: function latestData() view returns(bytes32)
+func (_Hackaton *HackatonCallerSession) LatestData() ([32]byte, error) {
+	return _Hackaton.Contract.LatestData(&_Hackaton.CallOpts)
+}
+
 // Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
 //
 // Solidity: function owner() view returns(address)
@@ -253,24 +284,24 @@ func (_Hackaton *HackatonTransactorSession) RenounceOwnership() (*types.Transact
 	return _Hackaton.Contract.RenounceOwnership(&_Hackaton.TransactOpts)
 }
 
-// SendEvent is a paid mutator transaction binding the contract method 0x27e0b899.
+// SendEvent is a paid mutator transaction binding the contract method 0x02b4834b.
 //
-// Solidity: function sendEvent(string data) returns()
-func (_Hackaton *HackatonTransactor) SendEvent(opts *bind.TransactOpts, data string) (*types.Transaction, error) {
+// Solidity: function sendEvent(bytes32 data) returns()
+func (_Hackaton *HackatonTransactor) SendEvent(opts *bind.TransactOpts, data [32]byte) (*types.Transaction, error) {
 	return _Hackaton.contract.Transact(opts, "sendEvent", data)
 }
 
-// SendEvent is a paid mutator transaction binding the contract method 0x27e0b899.
+// SendEvent is a paid mutator transaction binding the contract method 0x02b4834b.
 //
-// Solidity: function sendEvent(string data) returns()
-func (_Hackaton *HackatonSession) SendEvent(data string) (*types.Transaction, error) {
+// Solidity: function sendEvent(bytes32 data) returns()
+func (_Hackaton *HackatonSession) SendEvent(data [32]byte) (*types.Transaction, error) {
 	return _Hackaton.Contract.SendEvent(&_Hackaton.TransactOpts, data)
 }
 
-// SendEvent is a paid mutator transaction binding the contract method 0x27e0b899.
+// SendEvent is a paid mutator transaction binding the contract method 0x02b4834b.
 //
-// Solidity: function sendEvent(string data) returns()
-func (_Hackaton *HackatonTransactorSession) SendEvent(data string) (*types.Transaction, error) {
+// Solidity: function sendEvent(bytes32 data) returns()
+func (_Hackaton *HackatonTransactorSession) SendEvent(data [32]byte) (*types.Transaction, error) {
 	return _Hackaton.Contract.SendEvent(&_Hackaton.TransactOpts, data)
 }
 
@@ -385,13 +416,13 @@ func (it *HackatonDataIterator) Close() error {
 
 // HackatonData represents a Data event raised by the Hackaton contract.
 type HackatonData struct {
-	Information string
+	Information [32]byte
 	Raw         types.Log // Blockchain specific contextual infos
 }
 
-// FilterData is a free log retrieval operation binding the contract event 0xe8e349d9d60379b7e0a717f216d3d9efaf00b5dce8b634a63f24a5d76251059f.
+// FilterData is a free log retrieval operation binding the contract event 0xe3a4155b3f69dfa3d6f2117e5ac240e51df322f85f8084ee2cdd51398e036e3d.
 //
-// Solidity: event Data(string information)
+// Solidity: event Data(bytes32 information)
 func (_Hackaton *HackatonFilterer) FilterData(opts *bind.FilterOpts) (*HackatonDataIterator, error) {
 
 	logs, sub, err := _Hackaton.contract.FilterLogs(opts, "Data")
@@ -401,9 +432,9 @@ func (_Hackaton *HackatonFilterer) FilterData(opts *bind.FilterOpts) (*HackatonD
 	return &HackatonDataIterator{contract: _Hackaton.contract, event: "Data", logs: logs, sub: sub}, nil
 }
 
-// WatchData is a free log subscription operation binding the contract event 0xe8e349d9d60379b7e0a717f216d3d9efaf00b5dce8b634a63f24a5d76251059f.
+// WatchData is a free log subscription operation binding the contract event 0xe3a4155b3f69dfa3d6f2117e5ac240e51df322f85f8084ee2cdd51398e036e3d.
 //
-// Solidity: event Data(string information)
+// Solidity: event Data(bytes32 information)
 func (_Hackaton *HackatonFilterer) WatchData(opts *bind.WatchOpts, sink chan<- *HackatonData) (event.Subscription, error) {
 
 	logs, sub, err := _Hackaton.contract.WatchLogs(opts, "Data")
@@ -438,9 +469,9 @@ func (_Hackaton *HackatonFilterer) WatchData(opts *bind.WatchOpts, sink chan<- *
 	}), nil
 }
 
-// ParseData is a log parse operation binding the contract event 0xe8e349d9d60379b7e0a717f216d3d9efaf00b5dce8b634a63f24a5d76251059f.
+// ParseData is a log parse operation binding the contract event 0xe3a4155b3f69dfa3d6f2117e5ac240e51df322f85f8084ee2cdd51398e036e3d.
 //
-// Solidity: event Data(string information)
+// Solidity: event Data(bytes32 information)
 func (_Hackaton *HackatonFilterer) ParseData(log types.Log) (*HackatonData, error) {
 	event := new(HackatonData)
 	if err := _Hackaton.contract.UnpackLog(event, "Data", log); err != nil {

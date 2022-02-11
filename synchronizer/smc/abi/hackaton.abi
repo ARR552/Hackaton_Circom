@@ -9,9 +9,9 @@
 		"inputs": [
 			{
 				"indexed": false,
-				"internalType": "string",
+				"internalType": "bytes32",
 				"name": "information",
-				"type": "string"
+				"type": "bytes32"
 			}
 		],
 		"name": "Data",
@@ -38,6 +38,19 @@
 	},
 	{
 		"inputs": [],
+		"name": "latestData",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "owner",
 		"outputs": [
 			{
@@ -59,9 +72,9 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
+				"internalType": "bytes32",
 				"name": "data",
-				"type": "string"
+				"type": "bytes32"
 			}
 		],
 		"name": "sendEvent",

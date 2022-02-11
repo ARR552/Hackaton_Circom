@@ -9,8 +9,12 @@ contract Hackaton is Ownable {
     constructor() {
         
     }
-    event Data(string information);
-    function sendEvent(string memory data) public {
+    bytes32 public latestData;
+
+    event Data(bytes32 information);
+
+    function sendEvent(bytes32 data) public {
+        latestData = data;
         emit Data(data);
     }
 
